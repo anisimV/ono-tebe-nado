@@ -1,16 +1,17 @@
 /* header begin */
 
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   box-sizing: border-box;
   align-items: center;
   margin: 92px 24px 92px 24px;
   font-size: 18px;
+  font-weight: 400;
 }
 
 .header__links-list {
   display: flex;
-  padding: auto;
   list-style: circle;
   margin-left: 27px;
   letter-spacing: 0.1px;
@@ -27,12 +28,16 @@
 }
 
 .header__logo {
-  padding-left: 42px;
-  padding-right: 196px;
+  padding-left: 2px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .header__logo-image {
   height: 105px;
+  width: auto;
 }
 
 .address {
@@ -40,6 +45,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 24.3px;
+  margin-right: 62px;
 }
 
 .header__address {
@@ -53,12 +59,12 @@
 .cover {
   padding: 165px 50px 0 50px;
   margin-bottom: 179px;
-  background-image: url("/images/cover.jpg");
+  background-image: url("../images/cover.jpg");
   background-size: cover;
   background-position: top center;
   position: relative;
   width: 1100px;
-  height: 757px;
+  min-height: 757px;
   color: #fff;
   z-index: 1;
 }
@@ -127,11 +133,12 @@
 }
 
 .bet-button {
-  border: 1px solid #ffffff;
+  border: 1px solid currentColor;
   border-radius: 1px;
   margin-left: 79px;
   padding: 12px 32px 12px 31px;
   line-height: 28px;
+  font-family: inherit;
   font-size: 22px;
   font-weight: 500;
   text-transform: uppercase;
@@ -173,7 +180,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 563px;
+  min-height: 563px;
   margin-top: 27px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -182,15 +189,15 @@
 }
 
 .card_type_film {
-  background-image: url(/images/card-lot-01.jpg);
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-  background-image: url(/images/card-lot-02.jpg);
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-  background-image: url(/images/card-lot-03.jpg);
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .card__title {
@@ -298,7 +305,7 @@
   line-height: 21.13px;
   list-style-type: none;
   text-align: center;
-  margin-left: 40px;
+  margin-right: 24px;
 }
 
 .footer__menu-list-item {
@@ -312,9 +319,13 @@
 .footer__social-list {
   display: flex;
   justify-content: space-between;
-  width: 240px;
   list-style-type: none;
   gap: 48px;
+}
+
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
 }
 
 /* footer end */
